@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Sorteio de número</title>
+</head>
+
+<body>
+
+  <div class="titulo">
+    <h1> gerador de numeros aleatorios</h1>
+  </div>
+
+  <div class="grid">
+
+    <div class="bg">
+      <h3>insira o numero minimo</h3>
+
+      <input id="Min" type="number" class="inputs" value="1"
+        oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
+
+
+
+
+      <h3>insira o numero maximo</h3>
+      <input id="Max" type="number" class="inputs" oninput="this.style.width = ((this.value.length + 1 * 2)) + 'ch';" size="2">
+
+
+
+      <!-- maxlength="2"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"> -->
+    </div>
+
+  </div>
+
+  <div class="result">
+
+    <h1> resultado: </h1>
+    <h2 class="resultado-final" id="resultado-final">0</h2>
+
+    <button class="button" id="botao">Gerar Número</button>
+
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

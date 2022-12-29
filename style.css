@@ -1,0 +1,168 @@
+:root {
+  --c0: #ffffff;
+  --c1: #f7f7f7;
+  --c2: #ededed;
+  --c3: #dedede;
+  --c4: #cccccc;
+  --c5: #b2b2b2;
+  --c6: #9c9c9c;
+  --c7: #717171;
+  --c8: #e7e5e5;
+  --c9: #404040;
+  --c10: #2e2e2e;
+  --c11: #111111;
+  --c12: #b1a9a9;
+  --c13: #38445c;
+  --c14: #173f8a;
+  --c15: #224063;
+
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+
+}
+
+body {
+
+  font-family: sans-serif;
+  background-color: #dddddd;
+
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--c15);
+}
+
+
+/* botão */
+.button {
+  color: #000;
+  border-radius: 30px;
+
+  width: 7em;
+  height: 2em;
+  font-size: 2em;
+  background: #ffffff;
+  cursor: pointer;
+
+
+
+
+}
+
+.button:hover {
+  background: var(--c14);
+
+}
+
+
+
+.result h2 {
+  font-size: 2rem;
+  width: max-content;
+  display: inline-block;
+}
+
+.resultado-final {
+  border: 3px solid var(--c12);
+  border-radius: 4px;
+  margin: 15px;
+  width: 2rem max-content;
+  padding: 10px;
+
+
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+
+
+}
+
+.bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: #ffffff;
+  width: 450px;
+  border: 5px #000000 solid;
+  height: 200px;
+
+
+
+}
+
+
+.bg:hover,
+.bg:focus-within {
+  border: 5px var(--c14) solid;
+}
+
+.grid h3 {
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0px;
+  flex: 1;
+  font-size: 1.2rem;
+
+
+
+}
+
+
+
+
+
+.inputs {
+  width: 3rem;
+  min-width: 3rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: max-content;
+  background-color: transparent;
+  outline: none;
+
+
+
+
+
+}
+
+
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+
+
+
+
+}
+
+.result h1 {
+  margin-top: 15px;
+  margin-bottom: 0px;
+
+
+}
