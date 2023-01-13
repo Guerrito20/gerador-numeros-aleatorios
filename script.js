@@ -2,12 +2,13 @@ const botao = document.querySelector("#botao");
 
 botao.onclick = function ativar() {
   const display = document.getElementById("resultado-final");
-  let min1 = document.getElementById("Min").value;
-  let max1 = document.getElementById("Max").value;
+  let min1 = parseInt(document.getElementById("Min").value);
+  let max1 = parseInt(document.getElementById("Max").value);
 
   if (min1 > max1) {
-    window.alert("erro");
-   
+    window.alert(
+      `erro 1: o numero minimo ${min1} é maior do que o numero maximo ${max1}`
+    );
   } else {
     console.log(min1, max1);
 
@@ -17,7 +18,6 @@ botao.onclick = function ativar() {
 
     display.innerHTML = result;
 
-    console.log(display);
     console.log(`o resultado é ${result}`);
   }
 };
