@@ -23,14 +23,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
+
 
 }
 
 body {
 
   font-family: sans-serif;
-  background-color: #dddddd;
+  background-color: #a0d856;
+  
+
 
 }
 
@@ -133,12 +135,17 @@ h1 {
   min-width: 3rem;
   height: 2rem;
   font-size: 1.4rem;
-  border: 2px solid #000;
+  border: transparent;
+  border-bottom: 3px solid #000;
+  border-top: 2px solid #000;
+  border-bottom-style: groove;
+
   border-radius: 10px;
   background-color: #ffffff;
   max-width: max-content;
   background-color: transparent;
   outline: none;
+  
 
 
 
