@@ -20,24 +20,24 @@
     <div class="bg">
       <h3>insira o numero minimo</h3>
 
-      <input id="Min" type="number" class="inputs" value="1"
+      <input id="Min" type="number" class="inputs" value="1" maxlength="50"
         oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
 
 
 
 
       <h3>insira o numero maximo</h3>
-      <input id="Max" type="number" class="inputs" oninput="this.style.width = ((this.value.length + 1 * 2)) + 'ch';" size="2">
+      <input id="Max" type="number" class="inputs" value="50" maxlength="50"
+        oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
 
 
 
-      <!-- maxlength="2"
-        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"> -->
+
     </div>
 
   </div>
 
-  <div class="result">
+  <div class=" result">
 
     <h1> resultado: </h1>
     <h2 class="resultado-final" id="resultado-final">0</h2>
@@ -45,8 +45,9 @@
     <button class="button" id="botao">Gerar Número</button>
 
 
+
   </div>
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 
 </html>
