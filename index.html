@@ -14,39 +14,58 @@
   <div class="titulo">
     <h1> gerador de numeros aleatorios</h1>
   </div>
+  <form>
+    <div class="grid">
 
-  <div class="grid">
+      <div class="bg">
+        <div class="wrapper-number">
+          <h3 class="insira">insira o numero minimo</h3>
+          <!-- botao menos min -->
+          <button class="buttons2" type="button" id="minusMin" onclick="plusminus(this.id)">-</button>
+          <!--input-->
+          <input id="Min" type="number" class="inputs" value="1" maxlength="50"
+            oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
+          <!--botao mais min-->
+          <button class="buttons2" type="button" id="maxMin" onclick="plusminus(this.id)">+</button>
+        </div>
+        <div class="wrapper-number">
 
-    <div class="bg">
-      <h3>insira o numero minimo</h3>
+          <h3 class="insira">insira o numero maximo</h3>
+          <!-- botao menos input max  -->
+          <button class="buttons2" type="button" id="minusMax" onclick="plusminus(this.id)">-</button>
+          <!--input-->
+          <input id="Max" type="number" class="inputs" value="50" maxlength="50"
+            oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
+          <!--botao mais input max-->
+          <button class="buttons2" type="button" id="maxMax" onclick="plusminus(this.id)">+</button>
+        </div>
+      </div>
 
-      <input id="Min" type="number" class="inputs" value="1" maxlength="50"
-        oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
-
-
-
-
-      <h3>insira o numero maximo</h3>
-      <input id="Max" type="number" class="inputs" value="50" maxlength="50"
-        oninput="this.style.width = ((this.value.length + 1)) + 'ch';">
+    </div>
+    <!--RESULTADO -->
+    <div class=" result">
+      <div class="buttons">
+        <button type="button" class="button" id="botao">Gerar Número</button>
+        <button type="reset" class="button" id="reset">resetar</button>
+      </div>
+      <h1> resultado: </h1>
+      <h2 class="resultado-final" id="resultado-final">0</h2>
 
 
 
 
     </div>
+    <!--INSTRUÇÕES-->
+    <div class="instructions">
+      <h3> INSTRUÇÕES:</h1>
+        <p>
+          Insira um numero minimo e um numero máximo, apos isso clique em Gerar numero, e ele irá gerar um numero
+          aleatorio entre os numeros selecionados. caso queira resetar o resultado, clique no botão "Resetar".
 
-  </div>
+        </P>
+    </div>
 
-  <div class=" result">
-
-    <h1> resultado: </h1>
-    <h2 class="resultado-final" id="resultado-final">0</h2>
-
-    <button class="button" id="botao">Gerar Número</button>
-
-
-
-  </div>
+  </form>
   <script src="./script.js" defer></script>
 </body>
 
