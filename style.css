@@ -54,11 +54,18 @@ h1 {
   font-size: 2em;
   background: #ffffff;
   cursor: pointer;
+  margin: 1rem;
+  
 
 
 
 
 }
+
+
+
+
+
 
 .button:hover {
   background: var(--c14);
@@ -96,7 +103,9 @@ h1 {
 .bg {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 15px;
+
   align-items: center;
   align-content: center;
   text-align: center;
@@ -115,12 +124,13 @@ h1 {
   border: 5px var(--c14) solid;
 }
 
-.grid h3 {
+.insira{
   text-align: right;
   text-transform: uppercase;
   margin: 0px;
   flex: 1;
   font-size: 1.2rem;
+  grid-row: 1;
 
 
 
@@ -130,21 +140,26 @@ h1 {
 
 
 
-.inputs {
+ .inputs, .buttons2{
   width: 3rem;
   min-width: 3rem;
+  max-width: max-content;
   height: 2rem;
   font-size: 1.4rem;
   border: transparent;
   border-bottom: 3px solid #000;
   border-top: 2px solid #000;
   border-bottom-style: groove;
+ 
 
   border-radius: 10px;
   background-color: #ffffff;
-  max-width: max-content;
   background-color: transparent;
   outline: none;
+  padding: 0px;
+  margin: 0px;
+  
+  grid-row: 2;
   
 
 
@@ -153,11 +168,17 @@ h1 {
 
 }
 
+.buttons2:hover{
+  background-color: #173f8a;
+  cursor: pointer;
+}
+
 
 
 .result {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   padding: 0px;
   margin: 0px;
@@ -173,3 +194,26 @@ h1 {
 
 
 }
+
+
+.instructions{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  height: 50vh auto;
+  font-weight: bold;
+  border: 3px solid var(--c12);
+  border-radius: 4px;
+ 
+
+}
+
+.instructions h3{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
