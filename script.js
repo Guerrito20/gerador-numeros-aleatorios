@@ -8,58 +8,87 @@ const defaultv = 0;
 let min1 = parseInt(document.getElementById("Min").value);
 let max1 = parseInt(document.getElementById("Max").value);
 
-function plusminus(id) {
-  if (id == "minusMin") {
-    console.log(id);
+const buttons = document.querySelectorAll(".buttons2");
 
-    min1--;
+
+document.getElementById("Min").addEventListener("input", function() {
+  
+  min1 = parseInt(this.value);
+  
+  if (isNaN(min1)) {
+    min1 = defaultmin;
+    this.value = defaultmin;
+  }
+    
+
+  console.log(min1);
+})
+
+document.getElementById("Max").addEventListener("input", function() {
+  max1 = parseInt(this.value);
+
+  if (isNaN(max1)) {
+    max1 = defaultmax;
+    this.value = defaultmax;
+  }
+    
+
+
+  console.log(max1);
+});
+
+
+
+buttons.forEach(button => {
+  button.addEventListener('click', event => {
+    const clickedButtonId = event.target.id;
+
+    //diminuir o minimo
+    if (clickedButtonId === 'minusMin') {
+
+        
     document.getElementById("Min").stepDown(1);
-
+    min1--;
     console.log(min1);
-  } else if (id == "maxMin") {
-    console.log(id);
-    min1++;
-    document.getElementById("Min").stepUp(1);
 
-    console.log(min1);
-  } else if (id == "minusMax") {
-    console.log(id);
-    max1--;
-    document.getElementById("Max").stepDown(1);
+     
+    //aumentar o minimo
+    }else if (clickedButtonId == "maxMin") {
+      document.getElementById("Min").stepUp(1);
+      min1++;
+      console.log(min1);
+  
+    
+      //diminuir o maximo
+    } else if (clickedButtonId == "minusMax") {
+      
+      max1--;
+      document.getElementById("Max").stepDown(1);
+  
+      console.log(max1);
+      //aumentar o maximo
+    } else if (clickedButtonId == "maxMax") {
+     
+      max1++;
+      document.getElementById("Max").stepUp(1);
+  
+      console.log(max1);
+    }
+    
+  });
+});
 
-    console.log(max1);
-  } else if (id == "maxMax") {
-    console.log(id);
-    max1++;
-    document.getElementById("Max").stepUp(1);
 
-    console.log(max1);
-  }
-}
 
-resetbtn.onclick = function reset() {
-  display.innerHTML = defaultv;
-  min1 = defaultmin;
-  max1 = defaultmax;
-
-  console.log(display, min1, max1);
-};
-
-/* function diminuir(id) {
-  if ((this.id = minusMin)) {
-    min1 - 1;
-    console.log(min1.value);
-  }
-} */
 
 botao.onclick = function ativar() {
-  min1 = parseInt(document.getElementById("Min").value);
-  max1 = parseInt(document.getElementById("Max").value);
-
   if (min1 > max1) {
     window.alert(
       `erro 1: o numero minimo ${min1} é maior do que o numero maximo ${max1}`
     );
+  } else if (min1 <= 0 || min1 >= 9999) {
+    window.alert(`erro2: o numero tem que ser entre 1 e 9999`);
+    console.log(min1);
   } else {
     console.log(min1, max1);
 
@@ -73,7 +102,3 @@ botao.onclick = function ativar() {
   }
 };
 
-/* maxlength="2"
-        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" */
-
-/* document.getElementById('resultado-final').innerHTML = result; */
