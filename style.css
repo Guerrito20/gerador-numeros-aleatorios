@@ -15,7 +15,6 @@
   --c13: #38445c;
   --c14: #173f8a;
   --c15: #224063;
-
 }
 
 html,
@@ -23,17 +22,18 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-
 }
 
 body {
-
   font-family: sans-serif;
-  background-color: #a0d856;
-  
+  background-color: #56d4d8;
+  background-image: url(https://asset.gecdesigns.com/img/backgrounds/blue-bubble-abstract-gradient-background-template-1638174595137-icon.webp);
+  background-size: 100%;
+}
 
-
+.container {
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -43,36 +43,84 @@ h1 {
   -webkit-text-stroke-color: var(--c15);
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 15px;
+
+  text-align: center;
+  background-color: rgba(141, 145, 144, 0.3);
+  width: 450px;
+  border: 4px #000000 solid;
+  height: 200px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.wrapper-number {
+  grid-row: 2;
+  background-color: rgba(141, 145, 144, 0.5);
+  height: fit-content;
+  border: 2px #000000 solid;
+  width: fit-content;
+}
+
+.bg:hover,
+.bg:focus-within {
+  transition: .5s ease-in-out;
+  border: 4px #772fb3 solid;
+}
+
+.insira, .insira2 {
+  
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  grid-column: 1;
+  margin-top: 30px;
+}
+
+.insira2 {
+  grid-column: 2;
+}
 
 /* botão */
 .button {
   color: #000;
-  border-radius: 30px;
+  border-radius: 10px;
 
-  width: 7em;
-  height: 2em;
-  font-size: 2em;
-  background: #ffffff;
+  width: 5em;
+  height: 2.5em;
+  font-size: 1.7rem;
+  background: #b6dbe9;
   cursor: pointer;
-  margin: 1rem;
-  
-
-
-
-
+  margin-top: 2em;
+  padding: 12px;
+  text-align: center;
 }
 
+.buttons {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  width: 450px;
 
-
-
-
+  display: flex;
+  justify-content: space-between;
+}
 
 .button:hover {
-  background: var(--c14);
-
+  background: #baaff3;
 }
-
-
 
 .result h2 {
   font-size: 2rem;
@@ -81,99 +129,47 @@ h1 {
 }
 
 .resultado-final {
-  border: 3px solid var(--c12);
+  border: 3px solid;
   border-radius: 4px;
   margin: 15px;
   width: 2rem max-content;
   padding: 10px;
-
-
 }
 
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-
-
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-.bg {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 15px;
-
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  background-color: #ffffff;
-  width: 450px;
-  border: 5px #000000 solid;
-  height: 200px;
-
-
-
-}
-
-
-.bg:hover,
-.bg:focus-within {
-  border: 5px var(--c14) solid;
-}
-
-.insira{
-  text-align: right;
-  text-transform: uppercase;
-  margin: 0px;
-  flex: 1;
-  font-size: 1.2rem;
-  grid-row: 1;
-
-
-
-}
-
-
-
-
-
- .inputs, .buttons2{
-  width: 3rem;
+.inputs,
+.buttons2 {
+  width: 4rem;
   min-width: 3rem;
   max-width: max-content;
   height: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border: transparent;
-  border-bottom: 3px solid #000;
-  border-top: 2px solid #000;
-  border-bottom-style: groove;
- 
+  text-align: center;
 
-  border-radius: 10px;
-  background-color: #ffffff;
   background-color: transparent;
   outline: none;
   padding: 0px;
   margin: 0px;
-  
+
   grid-row: 2;
+
   
-
-
-
-
-
 }
 
-.buttons2:hover{
-  background-color: #173f8a;
+.inputs:focus-within{
+  background-color: #aed6e2;
+}
+.buttons2:hover, .inputs:focus-within, .inputs:hover {
+  
+  transition: .3s ease-in-out;
+  background-color: #aed6e2;
   cursor: pointer;
 }
-
-
 
 .result {
   display: flex;
@@ -182,21 +178,14 @@ h1 {
   align-items: center;
   padding: 0px;
   margin: 0px;
-
-
-
-
 }
 
 .result h1 {
   margin-top: 15px;
   margin-bottom: 0px;
-
-
 }
 
-
-.instructions{
+.instructions {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -206,14 +195,12 @@ h1 {
   align-items: center;
   height: 50vh auto;
   font-weight: bold;
-  border: 3px solid var(--c12);
+  border: 3px solid;
   border-radius: 4px;
- 
-
+  padding: 15px;
 }
 
-.instructions h3{
+.instructions h3 {
   font-size: 1.4rem;
   text-align: center;
 }
-
